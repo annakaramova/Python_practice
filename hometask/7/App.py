@@ -12,9 +12,9 @@ class App:
         if os.path.exists(file_name):
             self.read_from_file(file_name)
 
-        self.save_file = open('users.csv', 'a')
+        self.save_file = open(file_name, 'a')
 
-        if os.path.getsize('users.csv') == 0:
+        if os.path.getsize(file_name) == 0:
             self.save_file.write('Name,Phone,Email\n')
 
     def __del__(self):
